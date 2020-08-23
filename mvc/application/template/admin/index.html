@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            width: 100%;
+            min-height:20%;
+            background: orange;
+        }
+        .header h1{
+            text-align: center;
+            padding-top: 30px;
+        }
+        .logininfo{
+            float: right;
+            margin-right: 30px;
+        }
+        .main{
+            width: 100%;
+            height: 70%;
+            border:1px solid red;
+
+        }
+        .bottom{
+            width: 100%;
+            min-height: 10%;
+            position: relative;
+
+        }
+        .bottom div{
+            position: absolute;
+            left: 0;right: 0;top: 0;bottom: 0;
+            margin: auto;
+            text-align: center;
+            line-height: 40px;
+        }
+        .left{
+            width: 25%;
+            height: 100%;
+            border-right: 6px solid #000000;
+            float: left;
+            box-sizing: border-box;
+        }
+        .right{
+            width: 70%;
+            height: 100%;
+            float: left;
+            box-sizing: border-box;
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>欢迎来到后台管理系统</h1>
+        <div class="logininfo">
+            <span>用户:{$uname}</span>
+            <span>
+                <a href="/index.php/admin/index/logout">退出登录</a>
+            </span>
+        </div>
+    </div>
+        <div class="main">
+            <div class="left">
+                <ul>
+                    <li>
+                        用户管理
+                        <ul class="son">
+                            <li><a href="../../../demo/adduser.html" target="main">添加用户</a></li>
+                            <li><a href="../../../demo/edit.html" target="main">修改用户</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        栏目管理
+                        <ul class="son">
+                            <li>添加栏目</li>
+                            <li>修改栏目</li>
+                        </ul>
+                    </li><li>
+                    内容管理
+                    <ul class="son">
+                        <li>添加内容</li>
+                        <li>修改内容</li>
+                    </ul>
+                </li>
+
+                </ul>
+            </div>
+            <div class="right">
+                <iframe src="" frameborder="0" name="main"></iframe>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div>xxx版权 xxx制作  联系我们</div>
+        </div>
+
+</body>
+</html>

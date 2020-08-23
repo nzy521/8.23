@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{CSS_ADD}bootstrap.css">
+    <link rel="stylesheet" href="{CSS_ADD}admin/admin.css">
+    <script src="{JS_ADD}jquerymini.js"></script>
+    <script src="{JS_ADD}jquery.validate.js"></script>
+    <script src="{JS_ADD}admin/reg.js"></script>
+    <style>
+    </style>
+    <title>后台管理系统</title>
+</head>
+
+<body>
+    <div class="box-con">
+        <div style="text-align: center; font-size: 18px;margin-bottom: 10px;">注册页面</div>
+        <form class="form-horizontal" action="{ENTRY_ADD}/admin/reg/addUser" method="POST">
+            <div class="form-group">
+                <label for="uname" class="col-sm-2 control-label">账号</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="uname" placeholder="账号" name="uname">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pass" class="col-sm-2 control-label">密码</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pass" placeholder="Password" name="pass">
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pass1" class="col-sm-2 control-label">密码</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pass1" placeholder="再次输入密码" name="pass1">
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default" style="margin-left: 10px;">注册</button>
+                    已经账号？请点击
+                    <a href="{ENTRY_ADD}/admin" class="btn btn-default" style="margin-left: 5px;">登录</a>
+                </div>
+                <div class="col-sm-offset-2 col-sm-10">
+
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="entry" style="display: none;">{ENTRY_ADD}</div>
+    <script>
+        var str = $(".entry ").html() + "/admin/reg/checkName";
+        alert($("#uname").val());
+    </script>
+</body>
+
+</html>
